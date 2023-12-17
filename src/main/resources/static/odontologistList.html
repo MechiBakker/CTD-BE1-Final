@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Odontologist List</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/get_estudiante.js"></script>
+    <script type="text/javascript" src="/js/put_estudiante.js"></script>
+    <script type="text/javascript" src="/js/delete_estudiante.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>To list, update or delete an odontologist</h1>
+    <br>
+
+
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/index.html">Odontologist administration</a>
+        </li>
+    </ul>
+
+    <div id="div_odontologist_table">
+        <h1>Odontologist</h1>
+        <div class="row col-md-6 table-responsive">
+            <table id="odontologists" class="table table_striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Lastname</th>
+                    <th>Name</th>
+                    <th>License</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="display: none;
+                            backgound-color:#ffefe6; padding:10px; border-radius:3px"
+             id="div_odontologist_updating">
+            <form id="update_odontologist_form">
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" id="odontologist" readonly>
+                </div>
+                <div class="form-gorup">
+                    <label>Lastname:</label>
+                    <input type="text" class="form-control" placeholder="Lastname" id="lastname">
+                </div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" placeholder="Name" id="name">
+                </div>
+                <div class="form-group">
+                    <label>License:</label>
+                    <input type="text" class="form-control" placeholder="License" id="license">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Modify</button>
+            </form>
+            <div id="response" style="display:none; margin:10px"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
